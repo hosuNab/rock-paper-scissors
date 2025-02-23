@@ -1,0 +1,1 @@
+This will be a rock-paper-scissors game written in javascript. It will function in the console and doesn't have graphical interface. We'll try and use what ever necessary to build such a game. No prior experience!
