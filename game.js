@@ -21,33 +21,33 @@ function playRound(humanChoice, computerChoice) {
 
     getHumanChoice();
     getComputerChoice();
-    console.log("Player chose " + humanChoice);
-    console.log("Computer chose " + computerChoice);
+
+    console.log("Player chose " + humanChoice + "!");
+    console.log("Computer chose " + computerChoice + "!");
 
     if (humanChoice === computerChoice) {
         return "Draw!";
     } else if (humanChoice === "rock" && computerChoice === "scissors") {
+        humanScore++;
         return "1 point for human! Rock beats scissors!";
-        humanScore++;
     } else if (humanChoice === "rock" && computerChoice === "paper") {
+        computerScore++;
         return "1 point for computer! Paper beats rock!";
-        computerScore++;
     } else if (humanChoice === "paper" && computerChoice === "rock") {
+        humanScore++;
         return "1 point for human! Paper beats rock!";
-        humanScore++;
     } else if (humanChoice === "paper" && computerChoice === "scissors") {
+        computerScore++;
         return "1 point for computer! Scissors beats paper!";
-        computerScore++;
     } else if (humanChoice === "scissors" && computerChoice === "paper") {
-        return "1 point for human! Scissors beats paper!";
         humanScore++;
+        return "1 point for human! Scissors beats paper!";
     } else if (humanChoice === "scissors" && computerChoice === "rock") {
-        return "1 point for computer! Rock beats scissors!";
         computerScore++;
+        return "1 point for computer! Rock beats scissors!";
     } else {
         return "Error, I don't know how this happened!"
     }
-
 }
 
 console.log(playRound())
