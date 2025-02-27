@@ -2,12 +2,18 @@
 function getComputerChoice() {
     cpu = Math.floor(Math.random() * 3);
     if (cpu === 1) {
-        return "The Computer has chosen: Rock!";
+        return "rock";
     } else if (cpu === 2) {
-        return "The Computer has chosen: Paper!";
+        return "paper";
     } else {
-        return "The Computer has chosen: Scissors!";
+        return "scissors";
     }
 }
 
+// player's choice
+function getHumanChoice() {
+    let humanChoice = prompt("Rock, Paper, Scissors?");
+    return humanChoice;
+}
 console.log(getComputerChoice())
+console.log(getHumanChoice())
